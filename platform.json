@@ -1,5 +1,5 @@
 {
-  "name": "espressif32",
+  "name": "espressif32 - relectrify",
   "title": "Espressif 32",
   "description": "Espressif Systems is a privately held fabless semiconductor company. They provide wireless communications and Wi-Fi chips which are widely used in mobile devices and the Internet of Things applications.",
   "url": "https://espressif.com/",
@@ -10,14 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-espressif32.git"
+    "url": "https://github.com/relectrify/platform-espressif32.git"
   },
   "version": "0.7.5",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "http://dl.platformio.org/packages/manifest.json",
     "https://raw.githubusercontent.com/eerimoq/simba/master/make/platformio/manifest.json",
-    "https://raw.githubusercontent.com/eerimoq/pumbaa/master/make/platformio/manifest.json"
+    "https://raw.githubusercontent.com/eerimoq/pumbaa/master/make/platformio/manifest.json",
+    {"framework-espidf-relectrify": [
+    {
+      "sha1": "27574a31e7c41f6e22e10e9b9d7713c6d49f795d", 
+      "system": "*", 
+      "url": "https://github.com/espressif/esp-idf/archive/v2.1.tar.gz", 
+      "version": "2.1"
+    }
+  ]}
   ],
   "frameworks": {
     "arduino": {
@@ -51,6 +59,11 @@
       "type": "framework",
       "optional": true,
       "version": "~2.200.0"
+    },
+    "framework-espidf-relectrify": {
+      "type": "framework",
+      "optional": true,
+      "version": "~2.000.0"
     },
     "framework-simba": {
       "type": "framework",
